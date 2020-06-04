@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Page Info -->
+      <title>Product | Chatbot Inc.</title>
+      <meta name="author" content="Jerry Chen">
+      <meta name="description" content="This is a product website">
+      
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+   </head>
+   <body>
+      <img action="/home" class="logo" src="images/chatbot_inc_logo.png" alt="Chatbot Inc. Logo" class="logo">
+      <p class="header1">CHATBOT INC.</p>
+      <p class="subheader1">Giving you a virtual buddy since the 2019-2020 COVID-19 pandemic!</p>
+      <div class="topnav-container">
+         <div class="topnav">
+            <a action="/home" class="wasactive" href="home">Home</a>
+            <a action="/about" href="about">About Us</a>
+            <a action="/product" href="product">Product Features</a>
+            <a action="/pricing" href="pricing">Pricing</a>
+            <a action="/register" href="register">Register</a>
+            <a action="/login" href="login">Login</a>
+            <a action="/admin" href="admin">Admin</a>
+         </div>
+      </div>
+
+      {% if user %}
+      <form action="/logout" method="POST" style="margin-left: 100px; margin-top: 100px;">
+        <p> {{ user }} </p>
+        <button action="/logout" type="Logout">Logout</button>
+      </form>
+      {% endif %}
+
+      <p class="header1" style="margin-top:40px;"> Features </p>
+      <ul style="text-align:center;">
+        <li>Answer basic questions</li>
+        <li>Answer advanced topic questions</li>
+        <li>List example questions to the users (some functionalities and questions users can ask)</li>
+        <li>Build classifiers</li>
+        <li>Hands-off searching version of piazza like Siri, but more interactive</li>
+        <li>Send out emails to subscribers about a topic.</li>
+        <li>Quick access to FAQs, syllabus, and other files and information</li>
+        <li>Have random fun conversations</li>
+        <li>Turn materials into flash card features to aid with studying</li>
+      </ul>
+      <footer class = "foot"> <p>©2020 by Chatbot Inc. Proudly created with HTML and CSS.</p> </footer>
+   </body>
+</html>

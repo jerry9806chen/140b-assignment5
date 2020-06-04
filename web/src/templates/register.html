@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Page Info -->
+      <title>Register | Chatbot Inc.</title>
+      <meta name="author" content="Jerry Chen">
+      <meta name="description" content="This is a product website">
+      
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+   </head>
+   <body>
+      <img action="/home" class="logo" src="images/chatbot_inc_logo.png" alt="Chatbot Inc. Logo" class="logo">
+      <p class="header1">CHATBOT INC.</p>
+      <p class="subheader1">Giving you a virtual buddy since the 2019-2020 COVID-19 pandemic!</p>
+      <div class="topnav-container">
+         <div class="topnav">
+            <a action="/home" class="wasactive" href="home">Home</a>
+            <a action="/about" href="about">About Us</a>
+            <a action="/product" href="product">Product Features</a>
+            <a action="/pricing" href="pricing">Pricing</a>
+            <a action="/register" href="register">Register</a>
+            <a action="/login" href="login">Login</a>
+            <a action="/admin" href="admin">Admin</a>
+         </div>
+      </div>
+
+
+      <div class="row">
+         <div class="column_left">
+            <form action="/post_register" method="POST" style="margin-left: 100px; margin-top: 100px;">
+               <h1 style="font-family:Raleway;font-size:30pt;">SIGN UP!</h1>
+  
+               <input type='text' style="font-size:12pt;width:500px;height:55px;margin-bottom:15px" placeholder="   First Name" name="first_name" required>
+               <br> 
+               <input type='text' style="font-size:12pt;width:500px;height:55px;margin-bottom:15px" placeholder="   Last Name" name="last_name" required>
+               <br>
+               <input type='email' style="font-size:12pt;width:500px;height:55px;margin-bottom:15px" placeholder="   Email" name="email" required>
+               <br>
+               <input type='password' style="font-size:12pt;width:500px;height:55px;margin-bottom:15px" placeholder="   Password" name="password" required>
+               <br>
+               <button class="submit" type="submit">Submit</button>
+            </form>
+         </div>
+         <div class="column_right">
+            <img class="signup_pic" src="images/signup_pic.png">
+         </div>
+      </div>
+      <footer class = "foot"> <p>©2020 by Chatbot Inc. Proudly created with HTML and CSS.</p> </footer>
+
+   </body>
+</html>

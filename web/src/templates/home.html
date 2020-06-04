@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Page Info -->
+      <title>Home | Chatbot Inc.</title>
+      <meta name="author" content="Jerry Chen">
+      <meta name="description" content="This is a product website">
+
+      <link rel="stylesheet" type="text/css" href="css/styles.css">
+   </head>
+   <body>
+      <img action="/home" class="logo" src="images/chatbot_inc_logo.png" alt="Chatbot Inc. Logo" class="logo">
+      <p class="header1">CHATBOT INC.</p>
+      <p class="subheader1">Giving you a virtual buddy since the 2019-2020 COVID-19 pandemic!</p>
+      <div class="topnav-container">
+         <div class="topnav">
+            <a action="/home" class="wasactive" href="home">Home</a>
+            <a action="/about" href="about">About Us</a>
+            <a action="/product" href="product">Product Features</a>
+            <a action="/pricing" href="pricing">Pricing</a>
+            <a action="/register" href="register">Register</a>
+            <a action="/login" href="login">Login</a>
+            <a action="/admin" href="admin">Admin</a>
+         </div>
+      </div>
+
+      {% if error %}
+      <p> {{ error }} </p>
+      {% endif %}
+
+      {% if user %}
+      <form action="/logout" method="POST" style="margin-left: 100px; margin-top: 100px;">
+        <p> {{ user }} </p>
+        <button action="/logout" type="Logout">Logout</button>
+      </form>
+      {% endif %}
+      
+      <p class="header2">HANGOUT AND CHAT<br>WITH A CHATBOT!</p>
+      <p class="subheader2">Make a virtual friend!</p>
+<script>
+var slideIndex = 1;
+
+var myTimer;
+
+var slideshowContainer;
+
+window.addEventListener("load",function() {
+    showSlides(slideIndex);
+    myTimer = setInterval(function(){plusSlides(1)}, 4000);
+  
+    //COMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    slideshowContainer = document.getElementsByClassName('slideshow-inner')[0];
+  
+    //UNCOMMENT OUT THE LINE BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+    // slideshowContainer = document.getElementsByClassName('slideshow-container')[0];
+  
+    slideshowContainer.addEventListener('mouseenter', pause)
+    slideshowContainer.addEventListener('mouseleave', resume)
+})
+
+// NEXT AND PREVIOUS CONTROL
+function plusSlides(n){
+  clearInterval(myTimer);
+  if (n < 0){
+    showSlides(slideIndex -= 1);
+  } else {
+   showSlides(slideIndex += 1); 
+  }
+  
+  //COMMENT OUT THE LINES BELOW TO KEEP ARROWS PART OF MOUSEENTER PAUSE/RESUME
+  
+  if (n === -1){
+    myTimer = setInterval(function(){plusSlides(n + 2)}, 4000);
+  } else {
+    myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  }
+}
+
+//Controls the current slide and resets interval if needed
+function currentSlide(n){
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(n + 1)}, 4000);
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n){
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+pause = () => {
+  clearInterval(myTimer);
+}
+
+resume = () =>{
+  clearInterval(myTimer);
+  myTimer = setInterval(function(){plusSlides(slideIndex)}, 4000);
+}
+</script>
+<div class="slideshow-container">
+<div class="slideshow-inner">
+  <div class="mySlides fade">
+
+    <img  src='images/image1.png' style='width: 100%;'>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src='images/image2.png' style='width: 100%;'>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src='images/image3.png' style='width: 100%;'>
+  </div>
+
+  <div class="mySlides fade">
+
+    <img  src='images/image4.png' style='width: 100%;'>
+  </div>
+  
+  <div class="mySlides fade">
+    <img  src="images/image5.png" style='width: 100%'>
+  </div>
+
+  <div class="mySlides fade">
+    <img  src="images/image6.png" style='width: 100%'>
+  </div>
+
+  </div>
+
+
+  <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+  <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+</div>
+<br/>
+
+
+<div style='text-align: center; margin-top: 50px;'>
+  <span class="dot" onclick='currentSlide(1)'></span>
+  <span class="dot" onclick='currentSlide(2)'></span>
+  <span class="dot" onclick='currentSlide(3)'></span>
+  <span class="dot" onclick='currentSlide(4)'></span>
+  <span class="dot" onclick='currentSlide(5)'></span>
+  <span class="dot" onclick='currentSlide(6)'></span>
+</div>
+
+</div>
+
+
+      <p class="header3" style="background-color:#00FFFF;">WHAT WE DO</p>
+      <p class="p1">Chatbot Inc. is a brand-new maker of online virtual chatbots. Created by a group of people who started having to<br>stay in their homes in the midst of a pandemic which we will not refer to by name that is "totally nobody's" fault, we<br>offer a way to pass the time by allowing introverts to pretend to talk to a sentient entity so as not to become<br>psychologically tormented by boredom. Why not join our newsletter? Get in touch today to learn more!</p>
+      <img class="fullen" src="images/image1.png">
+      <p class="header3">WHY US?</p>
+      <p class="subheader2">New. Quick. Fun.</p>
+      <p class="p1" style="background-color:white;margin-top:0px">Here at Chatbot Inc., we'd like to believe so hopelessly that our chatbots will show themselves to be so fun, that even<br>people who understand nothing it says will listen to what it says. We've only just started, but we already know that<br>every product we build requires an understanding of programming languages, wasting plenty of time on single lines<br>of code, dedication, and a daring attitude. Blah blah blah.</p>
+      <img class="fullen" src="images/image3.png">
+      <footer class = "foot"> <p>©2020 by Chatbot Inc. Proudly created with HTML and CSS.</p> </footer>
+   </body>
+</html>
